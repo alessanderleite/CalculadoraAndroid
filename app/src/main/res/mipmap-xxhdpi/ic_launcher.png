@@ -1,0 +1,108 @@
+<application>
+  <component name="ActionsCollector">
+    <counts>
+      <entry action="$Copy" count="3" />
+      <entry action="$Cut" count="1" />
+      <entry action="$Delete" count="10" />
+      <entry action="$Paste" count="3" />
+      <entry action="$Undo" count="314" />
+      <entry action="Android.BuildApk" count="1" />
+      <entry action="Android.BuildBundle" count="1" />
+      <entry action="Android.ChooseProfileConfiguration" count="1" />
+      <entry action="Android.SyncProject" count="8" />
+      <entry action="ChangeSignature" count="1" />
+      <entry action="CleanGradleProject" count="7" />
+      <entry action="CloseAllEditors" count="38" />
+      <entry action="CloseContent" count="3" />
+      <entry action="CloseProject" count="69" />
+      <entry action="CodeCleanup" count="1" />
+      <entry action="CodeCompletion" count="98" />
+      <entry action="CommentByBlockComment" count="3" />
+      <entry action="CommentByLineComment" count="41" />
+      <entry action="DialogOkAction Enter" count="31" />
+      <entry action="EditorBackSpace" count="7473" />
+      <entry action="EditorChooseLookupItem" count="7043" />
+      <entry action="EditorChooseLookupItemReplace" count="2" />
+      <entry action="EditorCodeBlockStart" count="1" />
+      <entry action="EditorCopy" count="207" />
+      <entry action="EditorCut" count="52" />
+      <entry action="EditorDelete" count="465" />
+      <entry action="EditorDown" count="10450" />
+      <entry action="EditorDownWithSelection" count="526" />
+      <entry action="EditorEnter" count="4016" />
+      <entry action="EditorEscape" count="156" />
+      <entry action="EditorIndentSelection" count="1" />
+      <entry action="EditorLeft" count="5606" />
+      <entry action="EditorLeftWithSelection" count="1608" />
+      <entry action="EditorLineEnd" count="381" />
+      <entry action="EditorLineEndWithSelection" count="152" />
+      <entry action="EditorLineStart" count="48" />
+      <entry action="EditorLineStartWithSelection" count="136" />
+      <entry action="EditorPageDown" count="32" />
+      <entry action="EditorPageDownWithSelection" count="1" />
+      <entry action="EditorPageUp" count="56" />
+      <entry action="EditorPaste" count="409" />
+      <entry action="EditorPreviousWordWithSelection" count="14" />
+      <entry action="EditorRight" count="7460" />
+      <entry action="EditorRightWithSelection" count="2347" />
+      <entry action="EditorSplitLine" count="7" />
+      <entry action="EditorStartNewLine" count="1" />
+      <entry action="EditorTab" count="369" />
+      <entry action="EditorTextEnd" count="1" />
+      <entry action="EditorToggleInsertState" count="8" />
+      <entry action="EditorUnindentSelection" count="8" />
+      <entry action="EditorUp" count="5535" />
+      <entry action="EditorUpWithSelection" count="68" />
+      <entry action="Exit" count="4" />
+      <entry action="ExpandTreeNode" count="1" />
+      <entry action="Find" count="5" />
+      <entry action="FindPrevious" count="2" />
+      <entry action="Generate" count="23" />
+      <entry action="GotoDeclaration" count="90" />
+      <entry action="GotoImplementation" count="1" />
+      <entry action="HideAllWindows" count="1" />
+      <entry action="ImportSettings" count="1" />
+      <entry action="InvalidateCaches" count="1" />
+      <entry action="MakeGradleModule" count="1" />
+      <entry action="MakeGradleProject" count="12" />
+      <entry action="MoveStatementDown" count="4" />
+      <entry action="NewClass" count="44" />
+      <entry action="NewDir" count="7" />
+      <entry action="NewProject" count="5" />
+      <entry action="NextTemplateVariable" count="4" />
+      <entry action="OpenFile" count="1" />
+      <entry action="RebuildGradleProject" count="26" />
+      <entry action="ReformatCode" count="4" />
+      <entry action="RenameElement" count="5" />
+      <entry action="RevealIn" count="15" />
+      <entry action="Run" count="150" />
+      <entry action="RunClass" count="1" />
+      <entry action="SaveAll" count="778" />
+      <entry action="SearchEverywhere" count="1" />
+      <entry action="ShowIntentionActions" count="53" />
+      <entry action="Stop" count="21" />
+      <entry action="Synchronize" count="1" />
+      <entry action="ToggleLineBreakpoint" count="3" />
+      <entry action="Unwrap" count="1" />
+      <entry action="template.create.ActivityBasic Activity" count="3" />
+      <entry action="template.create.ActivityEmpty Activity" count="12" />
+      <entry action="template.create.ActivityNavigation Drawer Activity" count="1" />
+    </counts>
+  </component>
+  <component name="FeatureUsageStatistics" first-run="1541981783820" have-been-shown="false" show-in-other="true" show-in-compilation="true">
+    <feature id="refactoring.moveTopLevel" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.introduceTypedef" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.rename" count="1" last-shown="0" last-used="1542448050862" shown-count="0" />
+    <feature id="refactoring.pushDown" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.inlineMacro" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.changeSignature" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.quickFix" count="70" last-shown="0" last-used="1544779011131" shown-count="0" />
+    <feature id="codeassists.altInsert" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.complete.statement" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.inlineTypedef" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="navigation.goto.inspection" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.introduceConstant" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.pullUp" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="navigation.popup.class" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.overrideimplement" count="14" last-shown="0" last-used="1544779011132" shown-count="0" />
+    <feature id="codeassists.parameterInfo" count="0" last-shown="0" last-used="0" shown-cou

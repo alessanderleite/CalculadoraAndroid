@@ -1,0 +1,58 @@
+<application>
+  <component name="ActionsCollector">
+    <counts>
+      <entry action="$Copy" count="3" />
+      <entry action="$Cut" count="1" />
+      <entry action="$Delete" count="10" />
+      <entry action="$Paste" count="3" />
+      <entry action="$Undo" count="314" />
+      <entry action="Android.BuildApk" count="1" />
+      <entry action="Android.BuildBundle" count="1" />
+      <entry action="Android.ChooseProfileConfiguration" count="1" />
+      <entry action="Android.SyncProject" count="8" />
+      <entry action="ChangeSignature" count="1" />
+      <entry action="CleanGradleProject" count="7" />
+      <entry action="CloseAllEditors" count="38" />
+      <entry action="CloseContent" count="3" />
+      <entry action="CloseProject" count="69" />
+      <entry action="CodeCleanup" count="1" />
+      <entry action="CodeCompletion" count="98" />
+      <entry action="CommentByBlockComment" count="3" />
+      <entry action="CommentByLineComment" count="41" />
+      <entry action="DialogOkAction Enter" count="31" />
+      <entry action="EditorBackSpace" count="7466" />
+      <entry action="EditorChooseLookupItem" count="7035" />
+      <entry action="EditorChooseLookupItemReplace" count="2" />
+      <entry action="EditorCodeBlockStart" count="1" />
+      <entry action="EditorCopy" count="206" />
+      <entry action="EditorCut" count="52" />
+      <entry action="EditorDelete" count="464" />
+      <entry action="EditorDown" count="10409" />
+      <entry action="EditorDownWithSelection" count="526" />
+      <entry action="EditorEnter" count="4008" />
+      <entry action="EditorEscape" count="156" />
+      <entry action="EditorIndentSelection" count="1" />
+      <entry action="EditorLeft" count="5598" />
+      <entry action="EditorLeftWithSelection" count="1608" />
+      <entry action="EditorLineEnd" count="379" />
+      <entry action="EditorLineEndWithSelection" count="152" />
+      <entry action="EditorLineStart" count="48" />
+      <entry action="EditorLineStartWithSelection" count="136" />
+      <entry action="EditorPageDown" count="32" />
+      <entry action="EditorPageDownWithSelection" count="1" />
+      <entry action="EditorPageUp" count="56" />
+      <entry action="EditorPaste" count="408" />
+      <entry action="EditorPreviousWordWithSelection" count="14" />
+      <entry action="EditorRight" count="7455" />
+      <entry action="EditorRightWithSelection" count="2347" />
+      <entry action="EditorSplitLine" count="7" />
+      <entry action="EditorStartNewLine" count="1" />
+      <entry action="EditorTab" count="369" />
+      <entry action="EditorTextEnd" count="1" />
+      <entry action="EditorToggleInsertState" count="8" />
+      <entry action="EditorUnindentSelection" count="8" />
+      <entry action="EditorUp" count="5509" />
+      <entry action="EditorUpWithSelection" count="68" />
+      <entry action="Exit" count="4" />
+      <entry action="ExpandTreeNode" count="1" />
+      <entry action="Find" count="
