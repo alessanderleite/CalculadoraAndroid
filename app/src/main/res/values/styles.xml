@@ -8,4 +8,40 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="estiloBotoesOperacao" parent="@android:style/Widget.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#DBDFE8</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:background">@drawable/btnoperacao</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="estiloBotoesNumericos" parent="@android:style/Widget.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#DBDFE8</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:background">@drawable/btnnumeros</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="estiloBotoesOutros" parent="@android:style/Widget.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#DBDFE8</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:background">@drawable/btnOutros</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
 </resources>
