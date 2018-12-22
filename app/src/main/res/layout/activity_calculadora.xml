@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#242c3f"
     android:orientation="vertical"
     tools:context=".CalculadoraActivity">
 
@@ -16,11 +17,11 @@
             android:id="@+id/txtVisor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="end"
             android:layout_weight="1"
             android:background="#161a23"
             android:text="1234567890"
             android:textAlignment="textEnd"
-            android:layout_gravity="end"
             android:textColor="#dbdfe8"
             android:textSize="@dimen/tamanho_texto_visor" />
     </LinearLayout>
