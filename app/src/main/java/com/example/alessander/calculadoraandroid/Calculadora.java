@@ -20,5 +20,21 @@ public class Calculadora {
     public void setNumero(double numero) {
         this.numero = numero;
     }
-    
+
+    private void realizarOperacaoSimples() {
+        if (!operador.equals("")) {
+            if (operador.equals("+")) {
+                numero = numeroAnterior + numero;
+            } else if (operador.equals("-")) {
+                numero = numeroAnterior - numero;
+            } else if (operador.equals("x")) {
+                numero = numeroAnterior * numero;
+            } else if (operador.equals("÷")) {
+                if (numero != 0) {
+                    numero = numeroAnterior / numero;
+                }
+            }
+        }
+    }
+
 }
