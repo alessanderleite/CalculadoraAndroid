@@ -1,5 +1,6 @@
 package com.example.alessander.calculadoraandroid;
 
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,6 +41,20 @@ public class CalculadoraActivity extends AppCompatActivity {
         } else {
             txtVisor.setText(textoVisor + digito);
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+
+        outState.putString("text_txtVisor", txtVisor.getText().toString());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        txtVisor.setText(savedInstanceState.getString("text_txtVisor"));
     }
 
     public void onClickOperacoes(View v) {
