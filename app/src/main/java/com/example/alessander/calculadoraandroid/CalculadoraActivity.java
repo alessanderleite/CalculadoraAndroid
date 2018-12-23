@@ -43,6 +43,32 @@ public class CalculadoraActivity extends AppCompatActivity {
     }
 
     public void onClickOperacoes(View v) {
+        Button botaoTocado = (Button)v;
+        String operacao = botaoTocado.getText().toString();
 
+        if (operacao.equals(",") && !separadorDecimalDigitado) {
+            separadorDecimalDigitado = true;
+            if (!usuarioDigitando) {
+                txtVisor.setText("0" + ",");
+            } else {
+                txtVisor.setText(txtVisor.getText().toString() + ",");
+            }
+            usuarioDigitando = true;
+        } else if (!operacao.equals(",")) {
+            String modificaVirgula = txtVisor.getText().toString().replace(',','.');
+
+            calc.setNumero(Double.parseDouble(modificaVirgula));
+            calc.realizaOperacao(operacao);
+
+            String textoResultado = String.valueOf(calc.getNumero());
+
+            if (textoResultado.endsWith(".0")) {
+                textoResultado = textoResultado.substring(0, textoResultado.length() - 2);
+            }
+
+            txtVisor.setText(textoResultado.replace('.',','));
+            usuarioDigitando = false;
+            separadorDecimalDigitado = false;
+        }
     }
 }
