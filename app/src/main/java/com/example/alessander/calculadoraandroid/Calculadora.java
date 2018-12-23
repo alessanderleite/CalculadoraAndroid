@@ -37,4 +37,19 @@ public class Calculadora {
         }
     }
 
+    public void realizaOperacao(String op) {
+        if (op.equals("%")) {
+            numero = (numeroAnterior * numero) / 100;
+        } else if (op.equals("+/-")) {
+            numero = -numero;
+        } else if (op.equals("C")) {
+            numero = 0;
+            operador = "";
+        } else {
+            realizarOperacaoSimples();
+            operador = op;
+            numeroAnterior = numero;
+        }
+    }
+
 }
