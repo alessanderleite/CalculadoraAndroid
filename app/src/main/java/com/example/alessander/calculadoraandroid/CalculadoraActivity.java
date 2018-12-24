@@ -26,6 +26,10 @@ public class CalculadoraActivity extends AppCompatActivity {
         separadorDecimalDigitado = false;
         txtVisor = (TextView) findViewById(R.id.txtVisor);
         txtVisor.setText("0");
+
+        if (savedInstanceState != null) {
+            txtVisor.setText(savedInstanceState.getString("text_txtVisor"));
+        }
     }
 
     public void onClickNumeros(View v) {
@@ -53,8 +57,6 @@ public class CalculadoraActivity extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-
-        txtVisor.setText(savedInstanceState.getString("text_txtVisor"));
     }
 
     public void onClickOperacoes(View v) {
