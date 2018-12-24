@@ -88,4 +88,26 @@ public class CalculadoraActivity extends AppCompatActivity {
             separadorDecimalDigitado = false;
         }
     }
+
+    public void onClickMemoria(View v) {
+        Button botaoTocado = (Button)v;
+        String opMemoria = botaoTocado.getText().toString();
+
+        String modificaVirgula = txtVisor.getText().toString().replace(',','.');
+
+        calc.setNumero(Double.parseDouble(modificaVirgula));
+        calc.realizaMemoria(opMemoria);
+
+        usuarioDigitando = false;
+
+        String textoResultado = String.valueOf(calc.getNumero());
+
+        if (textoResultado.endsWith(".0")) {
+            textoResultado = textoResultado.substring(0, textoResultado.length() - 2);
+        }
+
+        txtVisor.setText(textoResultado.replace('.',','));
+        usuarioDigitando = false;
+        separadorDecimalDigitado = false;
+    }
 }
