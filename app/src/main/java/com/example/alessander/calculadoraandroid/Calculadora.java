@@ -5,12 +5,14 @@ public class Calculadora {
     private double numero;
     private double numeroAnterior;
     private String operador;
+    private double memoria;
 
     public Calculadora() {
 
         numero = 0;
         numeroAnterior = 0;
         operador = "";
+        memoria = 0;
     }
 
     public double getNumero() {
@@ -45,6 +47,7 @@ public class Calculadora {
         } else if (op.equals("C")) {
             numero = 0;
             operador = "";
+            memoria = 0;
         } else {
             realizarOperacaoSimples();
             operador = op;
@@ -52,4 +55,16 @@ public class Calculadora {
         }
     }
 
+    public void realizaMemoria(String m) {
+
+        if (m.equals("mc")) {
+            memoria = 0;
+        } else if (m.equals("m+")) {
+            memoria += numero;
+        } else if (m.equals("m-")) {
+            memoria -= numero;
+        } else if (m.equals("mr")) {
+            numero = memoria;
+        }
+    }
 }
