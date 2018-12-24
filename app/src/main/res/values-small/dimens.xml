@@ -5,4 +5,6 @@
 
     <dimen name="tamanho_texto_visor">44sp</dimen>
     <dimen name="tamanho_texto_botoes">24sp</dimen>
+    <dimen name="tamanho_texto_visor_landscape">30sp</dimen>
+    <dimen name="tamanho_texto_botoes_landscape">20sp</dimen>
 </resources>
