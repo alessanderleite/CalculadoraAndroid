@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CalculadoraActivity extends AppCompatActivity {
 
@@ -15,6 +16,40 @@ public class CalculadoraActivity extends AppCompatActivity {
     private boolean separadorDecimalDigitado;
 
     private TextView txtVisor;
+
+    private boolean versaoPro = false;
+
+    IabHelper iabHelper;
+    String chaveGooglePlay = "";
+
+    IabHelper.QueryInventoryFinishedListener inventarioListener
+            = new IabHelper.QueryInventoryFinishedListener() {
+        @Override
+        public void onQueryInventoryFinished(IabResult result, Inventory inv) {
+            if (!result.isFailure()) {
+                versaoPro = inv.hasPurchase("versaoprocalculadora");
+                if (versaoPro) {
+                    setContentView(R.layout.activity_calculadora_pro);
+                    iniciarInterface();
+                }
+            }
+        }
+    };
+
+    IabHelper.OnIabPurchaseFinishedListener compraFinalizada = new IabHelper.OnIabPurchaseFinishedListener() {
+        @Override
+        public void onIabPurchaseFinished(IabResult result, Purchase info) {
+            if (result.isFailure()) {
+                Toast.makeText(CalculadoraActivity.this, "Falha na compra! Tente novamente...",
+                        Toast.LENGTH_LONG).show();
+                return;
+            } else if (info.getSku().equals("versaoprocalculadora")) {
+                setContentView(R.layout.activity_calculadora_pro);
+                iniciarInterface();
+                versaoPro = true;
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
