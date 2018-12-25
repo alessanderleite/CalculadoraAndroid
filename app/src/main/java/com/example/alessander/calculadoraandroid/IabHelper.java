@@ -239,8 +239,14 @@ public class IabHelper {
                     // check for in-app billing v3 support
                     int response = mService.isBillingSupported(3, packageName, ITEM_TYPE_INAPP);
                     if (response != BILLING_RESPONSE_RESULT_OK) {
-                        if (listener != null) listener.onIabSetupFinished(new IabResult(response,
-                                "Error checking for billing v3 support."));
+                        if (listener != null) {
+                            try {
+                                listener.onIabSetupFinished(new IabResult(response,
+                                        "Error checking for billing v3 support."));
+                            } catch (IabAsyncInProgressException e) {
+                                e.printStackTrace();
+                            }
+                        }
 
                         // if in-app purchases aren't supported, neither are subscriptions
                         mSubscriptionsSupported = false;
@@ -280,15 +286,23 @@ public class IabHelper {
                 }
                 catch (RemoteException e) {
                     if (listener != null) {
-                        listener.onIabSetupFinished(new IabResult(IABHELPER_REMOTE_EXCEPTION,
-                                "RemoteException while setting up in-app billing."));
+                        try {
+                            listener.onIabSetupFinished(new IabResult(IABHELPER_REMOTE_EXCEPTION,
+                                    "RemoteException while setting up in-app billing."));
+                        } catch (IabAsyncInProgressException e1) {
+                            e1.printStackTrace();
+                        }
                     }
                     e.printStackTrace();
                     return;
                 }
 
                 if (listener != null) {
-                    listener.onIabSetupFinished(new IabResult(BILLING_RESPONSE_RESULT_OK, "Setup successful."));
+                    try {
+                        listener.onIabSetupFinished(new IabResult(BILLING_RESPONSE_RESULT_OK, "Setup successful."));
+                    } catch (IabAsyncInProgressException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         };
@@ -303,9 +317,13 @@ public class IabHelper {
         else {
             // no service available to handle that Intent
             if (listener != null) {
-                listener.onIabSetupFinished(
-                        new IabResult(BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE,
-                                "Billing service unavailable on device."));
+                try {
+                    listener.onIabSetupFinished(
+                            new IabResult(BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE,
+                                    "Billing service unavailable on device."));
+                } catch (IabAsyncInProgressException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
