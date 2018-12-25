@@ -1,6 +1,8 @@
 package com.example.alessander.calculadoraandroid;
 
+import android.content.Intent;
 import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -122,6 +124,11 @@ public class CalculadoraActivity extends AppCompatActivity {
         Button botaoTocado = (Button)v;
         String operacao = botaoTocado.getText().toString();
 
+        if (operacao.equals("info") && (!versaoPro)) {
+            comprarVersaoPro();
+            return;
+        }
+
         if (operacao.equals(",") && !separadorDecimalDigitado) {
             separadorDecimalDigitado = true;
             if (!usuarioDigitando) {
@@ -168,5 +175,35 @@ public class CalculadoraActivity extends AppCompatActivity {
         txtVisor.setText(textoResultado.replace('.',','));
         usuarioDigitando = false;
         separadorDecimalDigitado = false;
+    }
+
+    private void comprarVersaoPro() {
+        try {
+            iabHelper.launchPurchaseFlow(this,"versaoprocalculadora",1, compraFinalizada,"");
+        } catch (IllegalStateException ex) {
+            Toast.makeText(this, "Falha ao iniciar a compra...", Toast.LENGTH_LONG).show();
+        } catch (IabHelper.IabAsyncInProgressException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (!iabHelper.handleActivityResult(requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (iabHelper != null) {
+            try {
+                iabHelper.dispose();
+            } catch (IabHelper.IabAsyncInProgressException e) {
+                e.printStackTrace();
+            }
+            iabHelper = null;
+        }
     }
 }
