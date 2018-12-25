@@ -3,6 +3,7 @@ package com.example.alessander.calculadoraandroid;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -56,15 +57,38 @@ public class CalculadoraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora);
 
+        iabHelper = new IabHelper(this, chaveGooglePlay);
+
+        try {
+            iabHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
+                @Override
+                public void onIabSetupFinished(IabResult result) throws IabHelper.IabAsyncInProgressException {
+
+                    if (!result.isSuccess()) {
+                        Log.d("INICIO", "Falha na inicialização do In-app: " + result);
+                    } else {
+                        iabHelper.queryInventoryAsync(inventarioListener);
+                    }
+                }
+            });
+        } catch (Exception ex) {
+            Log.d("INICIO", "Execeção no In-app: " + ex.getMessage());
+        }
+
         calc = new Calculadora();
         usuarioDigitando = false;
         separadorDecimalDigitado = false;
-        txtVisor = (TextView) findViewById(R.id.txtVisor);
-        txtVisor.setText("0");
+
+        iniciarInterface();
 
         if (savedInstanceState != null) {
             txtVisor.setText(savedInstanceState.getString("text_txtVisor"));
         }
+    }
+
+    private void iniciarInterface() {
+        txtVisor = (TextView) findViewById(R.id.txtVisor);
+        txtVisor.setText("0");
     }
 
     public void onClickNumeros(View v) {

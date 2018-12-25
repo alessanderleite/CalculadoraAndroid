@@ -203,7 +203,7 @@ public class IabHelper {
          *
          * @param result The result of the setup process.
          */
-        void onIabSetupFinished(IabResult result);
+        void onIabSetupFinished(IabResult result) throws IabAsyncInProgressException;
     }
 
     /**
